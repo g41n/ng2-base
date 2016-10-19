@@ -6,7 +6,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
-    name = "Super Pippo";
+    heroes = [
+        {
+            name: "Super Pippo",
+            age: 74
+        }, {
+            name: "Batman",
+            age: 87
+        }, {
+            name: "Spiderman",
+            age: 24
+        }, {
+            name: "Thor",
+            age: 182
+        }
+    ];
 
     constructor() { }
 
