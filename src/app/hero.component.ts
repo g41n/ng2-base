@@ -1,28 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BackendService } from './backend.service';
+
 @Component({
     selector: 'hero',
-    templateUrl: 'hero.component.html'
+    templateUrl: 'hero.component.html',
+    providers: [BackendService]
 })
 export class HeroComponent implements OnInit {
 
-    heroes = [
-        {
-            name: "Super Pippo",
-            age: 74
-        }, {
-            name: "Batman",
-            age: 87
-        }, {
-            name: "Spiderman",
-            age: 24
-        }, {
-            name: "Thor",
-            age: 182
-        }
-    ];
+    heroes = [];
 
-    constructor() { }
+    constructor(private backend: BackendService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.heroes = this.backend.getHeroes();
+    }
 }
