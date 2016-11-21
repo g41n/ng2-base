@@ -14,6 +14,6 @@ export class HeroComponent implements OnInit {
     constructor(private backend: BackendService) { }
 
     ngOnInit() {
-        this.heroes = this.backend.getHeroes();
+        this.backend.getHeroes().then(heroes => this.heroes = heroes);
     }
 }
