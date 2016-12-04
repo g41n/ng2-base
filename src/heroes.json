@@ -1,22 +1,27 @@
 [
     {
         "name": "Super Pippo",
+        "power": "can fly",
         "age": 74
     },
     {
         "name": "Batman",
+        "power": "can fly",
         "age": 87
     },
     {
         "name": "Spiderman",
+        "power": "throw webs",
         "age": 24
     },
     {
         "name": "Thor",
+        "power": "strength",
         "age": 182
     },
     {
         "name": "Antman",
+        "power": "can fly",
         "age": 12
     }
 ]

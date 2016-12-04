@@ -1,3 +1,21 @@
-<ul>
-	<li *ngFor="let hero of heroes">{{hero.name}} ({{hero.age}} ages)</li>
-</ul>
+<div class="panel panel-default">
+	<!-- Default panel contents -->
+	<div class="panel-heading">Hero List</div>
+	<div class="panel-body">
+		<p>List of heroes and all theirs power!!</p>
+	</div>
+
+	<!-- Table -->
+	<table class="table">
+		<tr>
+			<th>name</th>
+			<th>power</th>
+			<th>age</th>
+		</tr>
+		<tr *ngFor="let hero of heroes">
+			<td>{{hero.name}}</td>
+			<td>{{hero.power}}</td>
+			<td>{{hero.age}}</td>
+		</tr>
+	</table>
+</div>

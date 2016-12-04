@@ -5,8 +5,9 @@ import { HeroComponent } from './hero.component';
 import { RoutingTestComponent } from './routing-test.component';
 
 const routes: Routes = [
-  { path: '', component: HeroComponent },
-  { path: 'routing-test', component: RoutingTestComponent },
+  { path: '', redirectTo: '/hero-component', pathMatch: 'full' },
+  { path: 'hero-component', component: HeroComponent },
+  { path: 'routing-test', component: RoutingTestComponent }
 ];
 
 @NgModule({
